@@ -80,4 +80,12 @@ public class Restaurant {
     public void setTables(List<RestaurantTable> tables) {
         this.tables = tables;
     }
+
+    public void addTable(RestaurantTable table){
+        tables.add(table);
+    }
+
+    public void addPackage(ExperiencePackage experiencePackage){
+        packages.add(experiencePackage);
+    }
 }

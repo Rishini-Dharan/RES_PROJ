@@ -1,13 +1,16 @@
 package com.techforge.reservation.entity;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.PrePersist;
 import jakarta.persistence.Table;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Table
@@ -24,6 +27,9 @@ public class Customer {
     private String phone;
 
     private LocalDateTime createdAt;
+
+    @OneToMany(mappedBy = "customer", fetch = FetchType.LAZY)
+    private List<Reservation> reservations;
 
     @PrePersist
     public void prePersist(){
@@ -68,5 +74,17 @@ public class Customer {
 
     public void setCreatedAt(LocalDateTime createdAt) {
         this.createdAt = createdAt;
+    }
+
+    public void addReservation(Reservation reservation){
+        reservations.add(reservation);
+    }
+
+    public List<Reservation> getReservations() {
+        return reservations;
+    }
+
+    public void setReservations(List<Reservation> reservations) {
+        this.reservations = reservations;
     }
 }
