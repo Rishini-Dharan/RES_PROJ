@@ -1,10 +1,10 @@
 package com.techforge.reservation.configuration;
 
+import com.techforge.reservation.annotation.Config;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
-@ConfigurationProperties(prefix = "app.db")
-@Component
+@Config("app.db")
 public class Database {
 
     private String url;
