@@ -1,20 +1,24 @@
 package com.techforge.reservation.configuration;
 
-import com.techforge.reservation.annotation.Config;
-import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-@Config("app.db")
+@Component
 public class Database {
 
+    @Value("${app.db.url}")
     private String url;
 
+    @Value("${app.db.username}")
     private String username;
 
+    @Value("${app.db.password}")
     private String password;
 
+    @Value("${app.db.driver}")
     private String driver;
 
+    @Value("${app.db.ddl}")
     private String ddl;
 
     public String getUrl() {

@@ -3,7 +3,6 @@ package com.techforge.reservation;
 import org.apache.catalina.Context;
 import org.apache.catalina.LifecycleException;
 import org.apache.catalina.startup.Tomcat;
-import org.springframework.boot.autoconfigure.context.ConfigurationPropertiesAutoConfiguration;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
 import org.springframework.web.servlet.DispatcherServlet;
 
@@ -22,7 +21,6 @@ public class Application {
 
         AnnotationConfigWebApplicationContext webApplicationContext = new AnnotationConfigWebApplicationContext();
         webApplicationContext.scan("com.techforge.reservation");
-        webApplicationContext.register(ConfigurationPropertiesAutoConfiguration.class);
         webApplicationContext.setServletContext(context.getServletContext());
         webApplicationContext.refresh();
 
