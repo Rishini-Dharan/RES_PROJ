@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Create Reservation</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: auto;
+            padding: 30px;
+        }
+
+        .field {
+            margin-bottom: 16px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .packages {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+        }
+
+        button {
+            padding: 12px 18px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>Create Reservation</h2>
+
+<form
+        th:action="@{/reservations}"
+        th:object="${reservation}"
+        method="post" autocomplete="off">
+    <!-- Customer -->
+    <div class="field">
+        <label>Customer</label>
+
+        <select name="customerId" required>
+            <option value="">Select customer</option>
+
+            <option
+                    th:each="c : ${customers}"
+                    th:value="${c.id}"
+                    th:text="${c.name}">
+            </option>
+        </select>
+    </div>
+
+    <!-- Table -->
+    <div class="field">
+        <label>Restaurant Table</label>
+
+        <select name="tableId" required>
+            <option value="">Select table</option>
+
+            <option
+                    th:each="t : ${tables}"
+                    th:value="${t.id}"
+                    th:text="${t.tableNumber}">
+            </option>
+        </select>
+    </div>
+
+    <!-- Start -->
+    <div class="field">
+        <label>Start Time</label>
+
+        <input
+                type="datetime-local"
+                th:field="*{startTime}"
+                required>
+    </div>
+
+    <!-- End -->
+    <div class="field">
+        <label>End Time</label>
+
+        <input
+                type="datetime-local"
+                th:field="*{endTime}"
+                required>
+    </div>
+
+    <!-- Party Size -->
+    <div class="field">
+        <label>Party Size</label>
+
+        <input
+                type="number"
+                min="1"
+                th:field="*{partySize}">
+    </div>
+
+    <!-- Packages -->
+    <div class="field">
+
+        <label>Experience Packages</label>
+
+        <div class="packages">
+
+            <label
+                    th:each="p : ${packages}">
+
+                <input
+                        type="checkbox"
+                        name="packageIds"
+                        th:value="${p.id}">
+
+                <span th:text="${p.name}"></span>
+
+            </label>
+
+        </div>
+
+    </div>
+
+    <!-- Special Request -->
+    <div class="field">
+
+        <label>Special Request</label>
+
+        <textarea
+                rows="4"
+                th:field="*{specialRequest}">
+        </textarea>
+
+    </div>
+
+    <button type="submit">
+        Create Reservation
+    </button>
+
+</form>
+
+</body>
+</html>

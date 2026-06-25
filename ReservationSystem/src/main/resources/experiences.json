@@ -1,0 +1,72 @@
+[
+  {
+    "restaurant": {
+      "id": 1
+    },
+    "name": "Birthday Celebration",
+    "description": "Decorated table with birthday cake and complimentary dessert.",
+    "price": 1499.99,
+    "inclusions": [
+      "Table Decoration",
+      "Birthday Cake",
+      "Complimentary Dessert",
+      "Birthday Music"
+    ]
+  },
+  {
+    "restaurant": {
+      "id": 1
+    },
+    "name": "Candle Light Dinner",
+    "description": "Romantic candlelight dinner with flowers and premium window seating.",
+    "price": 1999.99,
+    "inclusions": [
+      "Candle Light Setup",
+      "Rose Bouquet",
+      "Window Seat",
+      "Welcome Drink"
+    ]
+  },
+  {
+    "restaurant": {
+      "id": 1
+    },
+    "name": "Anniversary Special",
+    "description": "Celebrate your anniversary with a customized cake and elegant decorations.",
+    "price": 2499.99,
+    "inclusions": [
+      "Customized Cake",
+      "Flower Decoration",
+      "Photo Frame",
+      "Dessert Platter"
+    ]
+  },
+  {
+    "restaurant": {
+      "id": 1
+    },
+    "name": "Proposal Package",
+    "description": "Private proposal setup with candles, roses, and photography.",
+    "price": 4999.99,
+    "inclusions": [
+      "Private Corner Setup",
+      "Rose Decoration",
+      "Photography",
+      "Sparkling Beverage"
+    ]
+  },
+  {
+    "restaurant": {
+      "id": 1
+    },
+    "name": "Family Feast",
+    "description": "Reserved seating with a family combo meal and complimentary drinks.",
+    "price": 1799.99,
+    "inclusions": [
+      "Reserved Table",
+      "Family Combo Meal",
+      "Soft Drinks",
+      "Dessert"
+    ]
+  }
+]

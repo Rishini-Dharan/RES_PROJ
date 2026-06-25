@@ -88,4 +88,12 @@ public class Restaurant {
     public void addPackage(ExperiencePackage experiencePackage){
         packages.add(experiencePackage);
     }
+
+    public List<ExperiencePackage> getPackages() {
+        return packages;
+    }
+
+    public void setPackages(List<ExperiencePackage> packages) {
+        this.packages = packages;
+    }
 }

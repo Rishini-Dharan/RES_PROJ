@@ -5,6 +5,7 @@ import com.zaxxer.hikari.HikariDataSource;
 import jakarta.persistence.EntityManagerFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
@@ -16,6 +17,11 @@ import java.util.Properties;
 
 @Configuration
 @EnableTransactionManagement
+@EnableJpaRepositories(
+        basePackages = "com.techforge.reservation",
+        entityManagerFactoryRef = "entityManagerFactoryBean",
+        transactionManagerRef = "transactionManager"
+)
 public class DatabaseConfiguration {
 
     @Bean
@@ -40,9 +46,10 @@ public class DatabaseConfiguration {
         HibernateJpaVendorAdapter adapter = new HibernateJpaVendorAdapter();
         emf.setJpaVendorAdapter(adapter);
         Properties properties = new Properties();
-        properties.put("hibernate.dialect", "org.hibernate.dialect.MySQLDialect");
+        properties.put("hibernate.dialect", "org.hibernate.community.dialect.MySQLLegacyDialect");
         properties.put("hibernate.hbm2ddl.auto", database.getDdl());
         properties.put("hibernate.show_sql", true);
+        properties.put("hibernate.query.follow_on_locking", "true");
         emf.setJpaProperties(properties);
 
         return emf;

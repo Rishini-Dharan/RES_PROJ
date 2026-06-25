@@ -1,0 +1,92 @@
+[
+  {
+    "restaurant": {
+      "id": 1
+    },
+    "tableNumber": 1,
+    "capacity": 2,
+    "seatingArea": "WINDOW",
+    "premiumCharge": 150.00
+  },
+  {
+    "restaurant": {
+      "id": 1
+    },
+    "tableNumber": 2,
+    "capacity": 2,
+    "seatingArea": "CORNER",
+    "premiumCharge": 100.00
+  },
+  {
+    "restaurant": {
+      "id": 1
+    },
+    "tableNumber": 3,
+    "capacity": 4,
+    "seatingArea": "WINDOW",
+    "premiumCharge": 200.00
+  },
+  {
+    "restaurant": {
+      "id": 1
+    },
+    "tableNumber": 4,
+    "capacity": 4,
+    "seatingArea": "CORNER",
+    "premiumCharge": 150.00
+  },
+  {
+    "restaurant": {
+      "id": 1
+    },
+    "tableNumber": 5,
+    "capacity": 6,
+    "seatingArea": "WINDOW",
+    "premiumCharge": 300.00
+  },
+  {
+    "restaurant": {
+      "id": 1
+    },
+    "tableNumber": 6,
+    "capacity": 6,
+    "seatingArea": "CORNER",
+    "premiumCharge": 250.00
+  },
+  {
+    "restaurant": {
+      "id": 1
+    },
+    "tableNumber": 7,
+    "capacity": 8,
+    "seatingArea": "WINDOW",
+    "premiumCharge": 400.00
+  },
+  {
+    "restaurant": {
+      "id": 1
+    },
+    "tableNumber": 8,
+    "capacity": 8,
+    "seatingArea": "CORNER",
+    "premiumCharge": 350.00
+  },
+  {
+    "restaurant": {
+      "id": 1
+    },
+    "tableNumber": 9,
+    "capacity": 2,
+    "seatingArea": "WINDOW",
+    "premiumCharge": 150.00
+  },
+  {
+    "restaurant": {
+      "id": 1
+    },
+    "tableNumber": 10,
+    "capacity": 4,
+    "seatingArea": "CORNER",
+    "premiumCharge": 150.00
+  }
+]

@@ -17,7 +17,9 @@ import jakarta.persistence.PostUpdate;
 import jakarta.persistence.PrePersist;
 import jakarta.persistence.Table;
 
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity
@@ -46,12 +48,14 @@ public class Reservation {
 
     private String specialRequest;
 
+    private BigDecimal price;
+
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(
             joinColumns = @JoinColumn(name = "reservation_id"),
             inverseJoinColumns = @JoinColumn(name = "package_id")
     )
-    private Set<ExperiencePackage> packages;
+    private Set<ExperiencePackage> packages = new HashSet<>();
 
     private LocalDateTime createdAt;
 
@@ -160,4 +164,11 @@ public class Reservation {
         packages.add(experiencePackage);
     }
 
+    public BigDecimal getPrice() {
+        return price;
+    }
+
+    public void setPrice(BigDecimal price) {
+        this.price = price;
+    }
 }
