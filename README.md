@@ -367,7 +367,7 @@ It helps others discover the project and motivates future improvements.
 
 ---
 
-# 👨‍💻 Author
+# 👨‍💻 Authors
 
 **Rishini Dharan**
 
@@ -375,6 +375,13 @@ Passionate about building software that combines technology with meaningful user
 
 GitHub:
 https://github.com/Rishini-Dharan
+
+**Inbanithi R**
+
+Highly self motivated and confident person with very impactful learning and enjoyable journey.
+
+GitHub:
+https://github.com/Inbanithi107
 
 ---
 
